@@ -1,9 +1,11 @@
 Forked from puckel/airflow, to tweak:
-- SQLAlchemy version, in relation with https://github.com/apache/airflow/issues/8211
+- SQLAlchemy pinned version, in relation with https://github.com/apache/airflow/issues/8211
+- flask_oauth for github enterprise oauth
+- airflow s3
 - location of requirements.txt in the booting docker
 
 Build:
-docker build --rm --build-arg PYTHON_DEPS="flask_oauthlib>=0.9" -t sencrop/docker-airflow:1.10.9.x .
+docker build --rm -t sencrop/docker-airflow:1.10.9.x .
 
 
 # docker-airflow

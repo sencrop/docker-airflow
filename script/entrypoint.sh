@@ -24,8 +24,8 @@ export \
   AIRFLOW__CORE__LOAD_EXAMPLES \
 
 # Install custom python package if requirements.txt is present
-if [ -e "/usr/local/airflow/dags/requirements.txt" ]; then
-    $(command -v pip) install --user -r /usr/local/airflow/dags/requirements.txt
+if [ -e "/usr/local/airflow/deps/requirements.txt" ]; then
+    $(command -v pip) install --user -r /usr/local/airflow/deps/requirements.txt
 fi
 
 wait_for_port() {
